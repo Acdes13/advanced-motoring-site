@@ -502,3 +502,6 @@ h3 {
   padding-top: 15px;
   text-align: center;
 }
+.course-card img {
+  filter: invert(9%) sepia(83%) saturate(5106%) hue-rotate(199deg) brightness(90%) contrast(92%);
+}
