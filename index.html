@@ -212,19 +212,20 @@
             <div class="testimonial-item">"Would highly recommend... <br><strong>– Aurora Fitzpatrick</strong></div>
             <div class="testimonial-item">"Great instructor and very calm... <br><strong>– John Doe</strong></div>
             <!-- Add more testimonials as needed -->
-            <script>
-              const track = document.querySelector('.carousel-track');
-              const items = document.querySelectorAll('.carousel-item');
-              let index = 0;
-            
-              function autoSlide() {
-                index++;
-                if (index >= items.length) index = 0;
-                track.style.transform = translateX(-${index * 100}%);
-              }
-            
-              setInterval(autoSlide, 4000); // Change slide every 50 seconds
-            </script>
+           <script>
+  const track = document.querySelector('.carousel-track');
+  const items = document.querySelectorAll('.carousel-item');
+  let index = 0;
+
+  function autoSlide() {
+    index++;
+    if (index >= items.length) index = 0;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  setInterval(autoSlide, 4000); // Change slide every 4 seconds
+</script>
+
             
           </div>
         </div>
