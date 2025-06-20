@@ -310,17 +310,19 @@
     font-size: 1rem;
     color: #333;
     margin-top
-}
+
+  
 .stats {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
   
   .stat-box {
     flex: 1 1 150px;
