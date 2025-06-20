@@ -505,3 +505,39 @@ h3 {
 .course-card img {
   filter: invert(9%) sepia(83%) saturate(5106%) hue-rotate(199deg) brightness(90%) contrast(92%);
 }
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #e97d20;
+    padding: 1rem;
+  }
+
+  .site-nav.active {
+    display: flex;
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .site-nav a {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+}

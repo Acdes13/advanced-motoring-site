@@ -165,10 +165,6 @@
   padding: 14px;
 }
 
-@media (max-width: 480px) {
-  .contact-container {
-    padding: 20px;
-  }
 
   .contact-form label {
     font-size: 1rem;
@@ -178,7 +174,19 @@
   .contact-form textarea {
     font-size: 1rem;
   }
+
+@media (max-width: 480px) {
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px;
+  }
+
+  .contact-form button {
+    font-size: 16px;
+    padding: 10px;
+  }
 }
+
 
     #popup {
       display: none;
@@ -326,6 +334,7 @@
         gap: 10px;
       }
     }
+    
   </style>
 </head>
 
@@ -339,9 +348,15 @@
         </div>
       
 </div>
-
+  <!-- Hamburger Button -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>
-   
+   <script>
+  function toggleMenu() {
+    document.getElementById("site-nav").classList.toggle("active");
+  }
+</script>
+
       
         <!-- Right: Navigation -->
         <nav style="flex: 1; text-align: left;">
