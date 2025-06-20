@@ -154,6 +154,31 @@
     .contact-form button:hover {
       background-color: #0050a0;
     }
+.contact-form input,
+.contact-form textarea {
+  font-size: 1rem;
+  padding: 12px;
+}
+
+.contact-form button {
+  font-size: 1rem;
+  padding: 14px;
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 20px;
+  }
+
+  .contact-form label {
+    font-size: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+}
 
     #popup {
       display: none;
@@ -330,27 +355,27 @@
         </nav>
       </header>
 
-  <!-- Contact Form -->
-  <div class="contact-container">
-    <h1>Contact Us</h1>
-    <p class="description">Reach out to book a lesson or ask a question.</p>
+ <div class="contact-container">
+  <h1>Contact Us</h1>
+  <p class="description">Reach out to book a lesson or ask a question.</p>
 
-    <form class="contact-form">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
+  <form class="contact-form">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required autocomplete="name">
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required autocomplete="email">
 
-       <label for="number">Number</label>
-      <input type="number" id="number" name="number" required>
+    <label for="number">Phone Number</label>
+    <input type="tel" id="number" name="number" required autocomplete="tel" pattern="[0-9+]+" inputmode="tel">
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required></textarea>
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required></textarea>
 
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
 
   <!-- Success Popup -->
   <div id="popup">
