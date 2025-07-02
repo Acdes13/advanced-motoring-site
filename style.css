@@ -505,3 +505,65 @@ h3 {
 .course-card img {
   filter: invert(9%) sepia(83%) saturate(5106%) hue-rotate(199deg) brightness(90%) contrast(92%);
 }
+.total-drive-app-section {
+  background: linear-gradient(135deg, #f4f9ff 0%, #e0f0ff 100%);
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.total-drive-container {
+  max-width: 700px;
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0);
+  text-align: center;
+}
+
+.total-drive-container h2 {
+  color: #002f66;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.total-drive-container .intro {
+  color: #444;
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.drive-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 30px;
+  max-width: 450px;
+  text-align: left;
+}
+
+.drive-feature-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #002f66;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.drive-feature-list i {
+  color: #e97d20;
+  margin-right: 14px;
+  font-size: 1.3rem;
+  min-width: 26px;
+}
+
+/* Closing statement */
+.total-drive-container .closing {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  margin-top: 20px;
+}
