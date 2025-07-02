@@ -252,7 +252,80 @@
       padding-top: 15px;
       text-align: center;
     }
-    
+    .image-gallery {
+  max-width: 1000px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 0 20px;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+/* Lightbox overlay styles */
+.lightbox-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  user-select: none;
+  pointer-events: none;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: #e97d20;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  line-height: 28px;
+  text-align: center;
+  padding: 0;
+  user-select: none;
+}
+
   </style>
 </head>
 <body>
@@ -280,9 +353,7 @@
         </nav>
       </header>
 
-  <!-- Hero Banner -->
-  <div class="hero">
-    <div class="hero-content">
+
      
     </div>
   </div>
@@ -310,7 +381,56 @@ Based in Navan, I specialise in manual lesson on the Navan test routes with a st
       </p>
       <a href="contact.html" class="cta-button">Get In Touch</a>
     </div>
-     
+     <div class="image-gallery" aria-label="Gallery of Advanced Motoring School images">
+  <img src="Images/car.jpeg" alt="Driving lesson on a country road" />
+  <img src="Images/gallery2.jpg" alt="Instructor teaching a student" />
+  <img src="Images/gallery3.jpg" alt="Car dashboard close-up" />
+  <img src="Images/gallery4.jpg" alt="Student passing the driving test" />
+  <img src="Images/gallery5.jpg" alt="Car parked in scenic area" />
+  <div class="lightbox-overlay" id="lightbox">
+  <div class="lightbox-content">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <img src="" alt="Expanded image" id="lightboxImage" />
+    <script>
+  const galleryImages = document.querySelectorAll('.image-gallery img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightboxImage');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImage.src = img.src;
+      lightboxImage.alt = img.alt;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden'; // prevent background scroll
+    });
+  });
+
+  lightboxClose.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Optional: close on ESC key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+</script>
+
+  </div>
+</div>
+
+</div>
     </div>
   <section class="testimonials-section" style="
   max-width: 1000px; 
