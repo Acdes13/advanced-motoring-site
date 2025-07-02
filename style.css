@@ -506,7 +506,7 @@ h3 {
   filter: invert(9%) sepia(83%) saturate(5106%) hue-rotate(199deg) brightness(90%) contrast(92%);
 }
 .total-drive-app-section {
-  background: linear-gradient(135deg, #f4f9ff 0%, #e0f0ff 100%);
+  background-color: #f9f9f9;  /* replaced gradient with light gray */
   padding: 60px 20px;
   display: flex;
   justify-content: center;
@@ -518,7 +518,7 @@ h3 {
   background: #ffffff;
   padding: 40px 50px;
   border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(255, 255, 255, 0);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.07); /* slightly softer shadow */
   text-align: center;
 }
 
@@ -560,7 +560,6 @@ h3 {
   min-width: 26px;
 }
 
-/* Closing statement */
 .total-drive-container .closing {
   font-size: 1.2rem;
   font-weight: 600;
