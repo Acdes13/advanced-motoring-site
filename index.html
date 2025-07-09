@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
     body {
@@ -96,6 +95,23 @@
       nav {
         text-align: right;
       }
+      .testimonial-scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.testimonial-scroll {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.testimonial-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
     }
   </style>
 </head>
@@ -231,12 +247,11 @@ At Advanced Motoring School, we don’t just teach you how to drive — we give 
 
 
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init({
-    duration: 800,
-    once: true
-  });
+  AOS.init({ duration: 800, once: true });
 </script>
+
 
   
 
@@ -264,19 +279,19 @@ At Advanced Motoring School, we don’t just teach you how to drive — we give 
 
            
            
- <script>
+<script>
   const track = document.querySelector('.testimonial-scroll');
   const items = document.querySelectorAll('.testimonial-item');
   let index = 0;
 
   function autoSlide() {
-    index++;
-    if (index >= items.length) index = 0;
+    index = (index + 1) % items.length;
     track.style.transform = `translateX(-${index * 100}%)`;
   }
 
   setInterval(autoSlide, 4000);
 </script>
+
 
 
             
