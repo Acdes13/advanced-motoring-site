@@ -259,13 +259,14 @@ At Advanced Motoring School, we don’t just teach you how to drive — we give 
             <div class="testimonial-item">"I couldn’t have asked for a better driving instructor.<br><strong>–Rebecca Cole</strong></div>
             <div class="testimonial-item">"Richard is a brilliant instructor, he has great patience for learners, couldn’t have passed my test if it wasn’t for him. I would 100% recommend anyone that’s looking for lessons/ pre test to go with Richard by far the best 👍<br><strong>– Mark O'Brien</strong></div>
             <div class="testimonial-item">"I highly recommend Richard as a driving instructor. He was incredibly patient, kind, and always constructive in his feedback. <br><strong>– David Sexton</strong></div>
-            <div class="testimonial-item">"Absolutely phenomenal! My experience with Richard Costello from the Advanced Motoring School was nothing short of exceptional. His expertise, patience, and tailored approach helped me conquer my driving test with ease. He not only taught me the necessary skills but also instilled confidence in me every step of the way. 
-              <br><strong>–Wura ola</strong></div>
-              <div class="testimonial-item">"I highly recommend Richard as a driving instructor. He was incredibly patient, kind, and always constructive in his feedback. <br><strong>– 
-Catherine O’Connell</strong></div>
-           <script>
-  const track = document.querySelector('.carousel-track');
-  const items = document.querySelectorAll('.carousel-item');
+            <div class="testimonial-item">"Absolutely phenomenal! My experience with Richard Costello from the Advanced Motoring School was nothing short of exceptional. His expertise, patience, and tailored approach helped me conquer my driving test with ease. He not only taught me the necessary skills but also instilled confidence in me every step of the way. <br><strong>–Wura ola</strong></div>
+             <div class="testimonial-item">"I cannot recommend Richard enough! I did a series of pretest lessons with him leading up to my test and just wouldn’t have passed without him. He couldn’t have been nicer to deal with - he was so patient, accommodating and knowledgeable; and his teaching methods and clear communication made for easy learning. <br><strong>–Catherine O’Connell</strong></div>
+
+           
+           
+ <script>
+  const track = document.querySelector('.testimonial-scroll');
+  const items = document.querySelectorAll('.testimonial-item');
   let index = 0;
 
   function autoSlide() {
@@ -274,8 +275,9 @@ Catherine O’Connell</strong></div>
     track.style.transform = `translateX(-${index * 100}%)`;
   }
 
-  setInterval(autoSlide, 4000); // Change slide every 4   seconds
+  setInterval(autoSlide, 4000);
 </script>
+
 
             
           </div>
@@ -399,6 +401,7 @@ Catherine O’Connell</strong></div>
         gap: 30px;
       }
     }
+    
   </style>
   
         </a>
